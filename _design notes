@@ -1,0 +1,32 @@
+/* -------------------------------------------------------------- 
+
+	DEFINITIONS: 	wayneraymond.com Design Notes
+	AUTHOR: 		Wayne Pretl
+	VERSION: 		00.02.2015
+
+	CONTENTS:
+
+	1 				Colours
+	2 				Typography
+	3 				Art direction
+
+-------------------------------------------------------------- */
+
+
+/* 1 COLOURS
+-------------------------------------------------------------- */
+black 				000		(main nav)
+dark grey 			464e54	(h1, h2)
+red 				ff3333 	(nav)
+
+
+/* 2 TYPOGRAPHY
+-------------------------------------------------------------- */
+h1 					raleway semi bold
+h2 (profile) 		raleway regular
+h2 					raleway light
+mainNav 			raleway regular
+
+
+/* 3 ART DIRECTION
+-------------------------------------------------------------- */

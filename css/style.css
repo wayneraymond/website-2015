@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/* -------------------------------------------------------------- 
+
+	DEFINITIONS: 	wayneraymond.com Style Sheet
+	AUTHOR: 		Wayne Pretl
+	VERSION: 		00.15.2015
+
+	CONTENTS:
+
+	0 				Colours
+	1 				Resets
+	2 				Typography & cursors
+	3 				Layout
+	4 				Media Query
+
+-------------------------------------------------------------- */
+
+
+/* 0 COLOURS
+--------------------------------------------------------------
+gold                #b99a54 
+*/
+
+
+/* 1 RESETS
+-------------------------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body                { line-height: 1;}
+ol, ul              { list-style: none;}
+blockquote, q       { quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none;}
+table               { border-collapse: collapse; border-spacing: 0;}
+
+/* Paul Irish Natural Box Model */
+* { Box-sizing: Border-box }
+
+/* 2 TYPOGRAPHY & CURSORS
+-------------------------------------------------------------- */
+h1 					{ font-family: 'ralewaysemibold', Arial, sans-serif; color: #464e54; font-size: 1.125em; /* 18/16 */ line-height: 1.25em; /* 20/16 */ -webkit-font-smoothing: antialiased; }
+.contentsNav h1     { font-size: 1em; /* 16 */ letter-spacing: 0.05em; }
+hgroup h2 			{ font-family: 'ralewayregular', Arial, sans-serif; color: #464e54; font-size: 1em; /* 16 */ line-height: 1.25em; /* 20/16 */ -webkit-font-smoothing: antialiased; }
+h2                  { font-family: 'ralewaylight', Arial, sans-serif; font-size: 1.125em; /* 18/16 */ line-height: 1.25em; /* 20/16 */ color: #464e54; -webkit-font-smoothing: antialiased; }
+h3                  { font-family: 'merriweatherlight_italic', 'Times New Roman', serif; font-size: 0.8125em; /* 13/16 */ line-height: 1.125em; /* 18/16 */ color: #ff3333; letter-spacing: 0.05em; -webkit-font-smoothing: antialiased;}
+p                   { font-family: 'merriweatherregular', 'Times New Roman', serif; font-size: 0.875em; /* 14/16*/ color:#464e54; line-height: 1.5em; /* 24/16 */ }
+a                   { font-family: 'merriweatherlight_italic', 'Times New Roman', serif; font-size: 1em; line-height: 1.5em; /* 24/16 */ color:#ff3333; text-decoration: none;}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('fonts/raleway-regular-webfont.eot');
+    src: url('fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway-regular-webfont.woff') format('woff'),
+         url('fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('fonts/raleway-semibold-webfont.eot');
+    src: url('fonts/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway-semibold-webfont.woff2') format('woff2'),
+         url('fonts/raleway-semibold-webfont.woff') format('woff'),
+         url('fonts/raleway-semibold-webfont.ttf') format('truetype'),
+         url('fonts/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('fonts/raleway-light-webfont.eot');
+    src: url('fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway-light-webfont.woff2') format('woff2'),
+         url('fonts/raleway-light-webfont.woff') format('woff'),
+         url('fonts/raleway-light-webfont.ttf') format('truetype'),
+         url('fonts/raleway-light-webfont.svg#ralewaylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'merriweatherlight_italic';
+    src: url('fonts/merriweather-lightitalic-webfont.eot');
+    src: url('fonts/merriweather-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-lightitalic-webfont.woff2') format('woff2'),
+         url('fonts/merriweather-lightitalic-webfont.woff') format('woff'),
+         url('fonts/merriweather-lightitalic-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-lightitalic-webfont.svg#merriweatherlight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'merriweatherregular';
+    src: url('fonts/merriweather-regular-webfont.eot');
+    src: url('fonts/merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('fonts/merriweather-regular-webfont.woff') format('woff'),
+         url('fonts/merriweather-regular-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-regular-webfont.svg#merriweatherregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'merriweatheritalic';
+    src: url('fonts/merriweather-italic-webfont.eot');
+    src: url('fonts/merriweather-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-italic-webfont.woff2') format('woff2'),
+         url('fonts/merriweather-italic-webfont.woff') format('woff'),
+         url('fonts/merriweather-italic-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-italic-webfont.svg#merriweatheritalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* 3 LAYOUT
+-------------------------------------------------------------- */
+/* hide unless on small screen */
+.mobile             { display: none;}
+
+/* header & main nav */
+.nav 				{ max-width: 940px; /*1024px margin*/ margin: 0 auto; margin-top: 90px; margin-bottom: 40px; clear:both;}
+.logo 				{ width: 100px; float:left;}
+.logo img 			{ max-width:100%; }
+
+.mainNav ul 		{ margin:0; padding:0; }
+.mainNav li 		{ display:inline; padding-left: 2.5em; /* 40/16 */ }
+.mainNav            { margin-top: 10px; float:right;}
+.mainNav a			{ font-family: 'ralewayregular', Arial, sans-serif; font-size: 0.875em; /* 14/16 */ color: #000; text-decoration: none; -webkit-font-smoothing: antialiased; }
+.mainNav a:hover    { color: #ff3333;}
+
+hgroup 				{ clear:both; padding-top: 26px;}
+
+/* contente & hero */
+.hero               { width:100%; height:380px; background: url("../img/hero-extended.jpg") center no-repeat;  background-color: #e9edf2; margin-bottom: 68px; float:left; }
+.contentsPanel      { width: 1024px; height:380px; margin:0 auto;}
+.contents           { width:340px; height:380px; float:left; margin-left:40px; transition: all 0.5s; }
+.topStrip           { width: 340px; min-height:20px; float:left; background-color: #637284; }
+.bottomStrip        { width: 340px; min-height:20px; float:left; background-color: #26231d; }
+.contentsNav        { min-height: 360px; background-color: rgba(255,255,255, 0.7); padding:40px;}
+.contentsNav li     { margin-bottom: 20px; }
+.contentsNav a      { font-family: 'merriweatherregular', 'Times New Roman', serif; font-size: 0.8125em; /* 13/16 */ line-height: 1.5em; /* 24/16 */ color: #464e54; text-decoration: none; }
+.contentsNav a:hover { color: #ff3333;}
+
+/* sections */
+.leaderStrip        { width:100%; height:50px; background-color: #e9edf2; float:left; }
+.sectionHeading     { width:100%; height:90px; background-color: #e9edf2; float:left;}
+.sectionHeading h1  { width: 1024px; margin:0 auto; padding: 42px 0 0 43px;}
+
+/* work */
+.introCSPanel       { width:100%; min-height:360px; background-color: #fff; float:left;}
+.introCaseStudy     { width: 1024px; min-height:360px; margin:0 auto;}
+.introCSImg         { width: 382px; height:360px; float: left; }
+.introCSCopy        { width:642px; height:360px; padding: 40px 0 0 140px; float:left;}
+.introCSCopy h2     { margin-bottom: 20px; }
+.introCSCopy p      { width:340px; margin-bottom: 20px; }
+
+/* quotes */
+.quotePanel         { width:100%; min-height:360px; background-color: #f3f1e5; float:left; }
+.quote              { width:1024px; margin:0 auto; padding-top: 120px; text-align: center; }
+.quote p            { color: #b99a54; font-size: 1.75em; /* 28/16 */ -webkit-font-smoothing: antialiased; }
+.quote footer       { font-family: 'merriweatherregular', 'Times New Roman', serif; color: #b99a54; font-size: 1em; line-height: 2em; -webkit-font-smoothing: antialiased;}
+.q2                 { background-color: #e9edf2; }
+.q2 p, .q2 footer   { color:#464e54;}
+
+/* ctas */
+.cta                { width:100%; background-color: #464e54; min-height: 160px; float: left;}
+.ctaBtn             { width: 285px; height: 50px; border:1px solid #fff; border-radius: 15px; text-align: center; margin: 0 auto; margin-top: 50px; }
+.ctaBtn:hover       { border-color: #b99a54; }
+.ctaBtn a           { font-family: 'ralewaysemibold', Arial, sans-serif; color: #fff; line-height: 50px; letter-spacing: 0.1em; -webkit-font-smoothing: antialiased; display: block; }
+.ctaBtn a:hover     { color: #b99a54;}
+
+/* 4 MEDIA QUERY
+-------------------------------------------------------------- */
+@media screen and (max-width: 450px) {
+    .mobile         { display:block;}
+    .nav            { margin-top: 20px; }
+    .logo           { width:100px; float:none; margin:0 auto; }
+    .logo img       { margin-bottom: 20px;}
+    .navScroll      { clear:both; overflow-x:scroll; -webkit-overflow-scrolling: touch;}
+    .mainNav        { width: 550px; height:45px; background-color: #f2f2f2; float:left; }
+    .mainNav a      { line-height: 45px; }
+    .profile        { display:none;}
+
+    .contentsPanel  { width:100%;}
+    .contents       { margin:0 auto; float:none; width:100%;}
+    .topStrip,
+    .bottomStrip    { width:90%; margin-left: 20px; }
+    
+    .leaderStrip    { display: none;}
+    .sectionHeading { width:100%; overflow: hidden;}
+    .introCaseStudy { width:100%;}
+    .introCSImg     { width:100%; height:100%; margin-bottom: 20px; }
+    .introCSImg img { width: 100%;}
+    .introCSCopy    { width:100%; padding: 0 40px; }
+    .introCSCopy p  { width: 100%; }
+
+    .quote          { width:100%; padding-top: 100px; }
+    .quote p        { font-size: 1.25em; /* 20/16*/ padding:0 10px;}
+}
+
+@media screen and (min-width: 451px) {
+    }
+
+
+
+
+
